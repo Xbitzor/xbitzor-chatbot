@@ -12,5 +12,6 @@ __pycache__/
 # Ignore system-specific files
 .DS_Store
 .rasa/cache/
+.rasa/
 rasa-env/
 models/
