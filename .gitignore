@@ -1,0 +1,13 @@
+# Ignore virtual environment
+rasa-env/
+
+# Ignore model files
+models/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore system-specific files
+.DS_Store
