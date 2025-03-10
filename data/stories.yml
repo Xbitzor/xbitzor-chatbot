@@ -1,0 +1,42 @@
+version: "3.0"
+
+stories:
+  - story: Search product flow
+    steps:
+      - intent: search_product
+      - action: action_search_shopify
+
+  - story: Legal policies flow
+    steps:
+      - intent: legal_policies
+      - action: action_search_shopify
+
+  - story: Shipping info flow
+    steps:
+      - intent: shipping_info
+      - action: action_search_shopify
+
+  - story: Payment terms flow
+    steps:
+      - intent: payment_terms
+      - action: action_search_shopify
+
+  - story: Price rules flow
+    steps:
+      - intent: price_rules
+      - action: action_search_shopify
+
+  - story: Check inventory flow
+    steps:
+      - intent: check_inventory
+      - action: action_search_shopify
+
+  - story: Product listings flow
+    steps:
+      - intent: product_listings
+      - action: action_search_shopify
+
+  - story: Content search flow
+    steps:
+      - intent: content_search
+      - action: action_search_shopify

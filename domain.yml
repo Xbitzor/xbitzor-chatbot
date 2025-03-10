@@ -1,0 +1,26 @@
+version: "3.0"
+
+intents:
+  - search_product
+  - legal_policies
+  - shipping_info
+  - payment_terms
+  - price_rules
+  - check_inventory
+  - product_listings
+  - content_search
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_default:
+    - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+
+actions:
+  - action_search_shopify
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

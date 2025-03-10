@@ -1,0 +1,68 @@
+version: "3.0"
+
+nlu:
+  - intent: search_product
+    examples: |
+      - Find [product name]
+      - Search for [product name]
+      - Do you have [product name]?
+      - Can you find [product name]?
+      - Show me [product name]
+
+  - intent: legal_policies
+    examples: |
+      - What is your refund policy?
+      - Can I get a refund?
+      - Tell me about your return policy.
+      - What is your privacy policy?
+      - Where can I find your terms of service?
+      - Do you have a shipping policy?
+      - What are your legal policies?
+
+  - intent: shipping_info
+    examples: |
+      - Tell me about your shipping information.
+      - What are your shipping options?
+      - How long does shipping take?
+      - Do you offer free shipping?
+      - What countries do you ship to?
+
+  - intent: payment_terms
+    examples: |
+      - What are your payment terms?
+      - How do I pay for my order?
+      - What payment methods do you accept?
+      - Can I pay with PayPal?
+      - Do you accept credit cards?
+
+  - intent: price_rules
+    examples: |
+      - What are your price rules?
+      - Do you offer discounts?
+      - Are there any special offers?
+      - Tell me about your pricing.
+      - What discounts do you have?
+
+  - intent: check_inventory
+    examples: |
+      - Check inventory for [product name]
+      - Is [product name] in stock?
+      - How many [product name] do you have?
+      - Do you have [product name] available?
+      - What's the stock level for [product name]?
+
+  - intent: product_listings
+    examples: |
+      - Show me all products
+      - List all products
+      - What products do you have?
+      - Can you show me your product catalog?
+      - Display your product listings
+
+  - intent: content_search
+    examples: |
+      - Find [page name]
+      - Search for [page name]
+      - Do you have a page about [topic]?
+      - Can you find [page name]?
+      - Show me [page name]

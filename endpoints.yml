@@ -1,0 +1,37 @@
+# endpoints.yml
+
+# Configuration for the custom action server
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Uncomment and configure the following if you're using a database for tracker store
+# tracker_store:
+#   type: SQL
+#   dialect: "sqlite"  # or "postgresql", "mysql", etc.
+#   db: "rasa.db"  # Path to the database file (for SQLite) or database name (for other dialects)
+#   username: "your_username"  # Optional: Database username
+#   password: "your_password"  # Optional: Database password
+#   host: "localhost"  # Optional: Database host
+#   port: 5432  # Optional: Database port
+
+# Uncomment and configure the following if you're using a remote NLU server
+# nlu:
+#   url: "http://localhost:5005/model/parse"
+
+# Uncomment and configure the following if you're using a remote model server
+# models:
+#   url: "http://localhost:5005/models"
+
+# Uncomment and configure the following if you're using a remote event broker (e.g., Kafka, RabbitMQ)
+# event_broker:
+#   type: "kafka"
+#   url: "localhost:9092"
+#   topic: "rasa_events"
+
+# Uncomment and configure the following if you're using a remote lock store (e.g., Redis)
+# lock_store:
+#   type: "redis"
+#   url: "localhost"
+#   port: 6379
+#   db: 0
+#   password: "your_password"  # Optional: Redis password
