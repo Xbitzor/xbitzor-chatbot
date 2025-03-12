@@ -2,7 +2,7 @@
 
 # Configuration for the custom action server
 action_endpoint:
-  url: "http://localhost:5055/webhook"
+  url: "http://localhost:5005/webhook"
 
 # Uncomment and configure the following if you're using a database for tracker store
 # tracker_store:

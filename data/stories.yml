@@ -1,42 +1,48 @@
-version: "3.0"
+version: "3.1"
 
 stories:
-  - story: Search product flow
+  - story: Customer asks about product and shipping
     steps:
-      - intent: search_product
-      - action: action_search_shopify
+      - intent: ask_products
+      - action: utter_ask_products
+      - intent: ask_shipping_options
+      - action: utter_ask_shipping_options
+      - intent: ask_shipping_time
+      - action: utter_ask_shipping_time
 
-  - story: Legal policies flow
+  - story: Customer asks about payment and refunds
     steps:
-      - intent: legal_policies
-      - action: action_search_shopify
+      - intent: ask_payment_methods
+      - action: utter_ask_payment_methods
+      - intent: ask_refund_policy
+      - action: utter_ask_refund_policy
+      - intent: ask_return_policy
+      - action: utter_ask_return_policy
 
-  - story: Shipping info flow
+  - story: Customer asks about account creation and password reset
     steps:
-      - intent: shipping_info
-      - action: action_search_shopify
+      - intent: ask_create_account
+      - action: utter_ask_create_account
+      - intent: ask_reset_password
+      - action: utter_ask_reset_password
 
-  - story: Payment terms flow
+  - story: Customer asks about product customization and availability
     steps:
-      - intent: payment_terms
-      - action: action_search_shopify
+      - intent: ask_product_customization
+      - action: utter_ask_product_customization
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
 
-  - story: Price rules flow
+  - story: Customer asks about product features and reviews
     steps:
-      - intent: price_rules
-      - action: action_search_shopify
+      - intent: ask_product_features
+      - action: utter_ask_product_features
+      - intent: ask_product_reviews
+      - action: utter_ask_product_reviews
 
-  - story: Check inventory flow
+  - story: Customer asks about order tracking and shipping
     steps:
-      - intent: check_inventory
-      - action: action_search_shopify
-
-  - story: Product listings flow
-    steps:
-      - intent: product_listings
-      - action: action_search_shopify
-
-  - story: Content search flow
-    steps:
-      - intent: content_search
-      - action: action_search_shopify
+      - intent: ask_order_tracking
+      - action: utter_ask_order_tracking
+      - intent: ask_shipping_time
+      - action: utter_ask_shipping_time

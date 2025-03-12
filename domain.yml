@@ -1,25 +1,663 @@
-version: "3.0"
+version: "3.1"
 
 intents:
-  - search_product
-  - legal_policies
-  - shipping_info
-  - payment_terms
-  - price_rules
-  - check_inventory
-  - product_listings
-  - content_search
+  - ask_products
+  - ask_product_availability
+  - ask_product_price
+  - ask_product_reviews
+  - ask_payment_methods
+  - ask_shipping_options
+  - ask_return_policy
+  - ask_create_account
+  - ask_reset_password
+  - recommend_product
+  - ask_product_features
+  - ask_product_price
+  - ask_product_customization
+  - ask_product_images
+  - ask_product_dimensions
+  - ask_product_suitability
+  - ask_product_warranty
+  - ask_product_reviews
+  - ask_product_customization_options
+  - ask_product_eco_friendliness
+  - ask_product_materials
+  - ask_product_usage
+  - ask_product_safety
+  - ask_product_sample
+  - ask_product_shelf_life
+  - ask_product_vegan
+  - ask_product_assembly
+  - ask_product_accessories
+  - ask_pre_order
+  - ask_international_availability
+  - ask_product_weight
+  - ask_product_sizes
+  - ask_discount
+  - ask_product_compatibility
+  - ask_return_policy
+  - ask_order_tracking
+  - ask_wholesale
+  - ask_place_order
+  - ask_payment_methods
+  - ask_paypal
+  - ask_cryptocurrency
+  - ask_minimum_order
+  - ask_cancel_order
+  - ask_track_order
+  - ask_change_payment_method
+  - ask_installment_payments
+  - ask_invoice
+  - ask_payment_security
+  - ask_multiple_payment_methods
+  - ask_first_time_discount
+  - ask_refund_cancel_order
+  - ask_discount_code
+  - ask_split_payment
+  - ask_gift_cards
+  - ask_apple_pay
+  - ask_international_credit_cards
+  - ask_receipt
+  - ask_credit_card_fee
+  - ask_google_pay
+  - ask_cash_on_delivery
+  - ask_change_order_after_payment
+  - ask_payment_success
+  - ask_refund_overpayment
+  - ask_payment_plans
+  - ask_debit_card
+  - ask_checks
+  - ask_refund_change_mind
+  - ask_shipping_options
+  - ask_shipping_cost
+  - ask_free_shipping
+  - ask_shipping_time
+  - ask_track_order_2
+  - ask_international_shipping
+  - ask_delivery_time
+  - ask_change_shipping_address
+  - ask_express_shipping
+  - ask_pickup_in_store
+  - ask_shipping_carriers
+  - ask_same_day_delivery
+  - ask_po_box_shipping
+  - ask_schedule_delivery
+  - ask_cutoff_time
+  - ask_overnight_shipping
+  - ask_tracking_number
+  - ask_apo_fpo_shipping
+  - ask_change_shipping_method
+  - ask_free_shipping_over_amount
+  - ask_refund_late_delivery
+  - ask_shipping_country
+  - ask_shipping_confirmation
+  - ask_carbon_neutral_shipping
+  - ask_refund_lost_order
+  - ask_multiple_address_shipping
+  - ask_shipping_estimate
+  - ask_shipping_insurance
+  - ask_refund_damaged_order
+  - ask_remote_area_shipping
+  - ask_return_policy_2
+  - ask_return_product_dislike
+  - ask_initiate_return
+  - ask_free_returns
+  - ask_return_window
+  - ask_refund_defective_product
+  - ask_refund_processing_time
+  - ask_exchange_product
+  - ask_original_packaging_return
+  - ask_return_without_receipt
+  - ask_refund_digital_product
+  - ask_return_after_window
+  - ask_store_credit
+  - ask_return_opened_product
+  - ask_return_status
+  - ask_return_used_product
+  - ask_partial_refund
+  - ask_return_damaged_shipping
+  - ask_return_label
+  - ask_return_wrong_size
+  - ask_refund_international_order
+  - ask_return_not_as_described
+  - ask_contact_support_return
+  - ask_return_missing_parts
+  - ask_refund_sale_items
+  - ask_return_expired_product
+  - ask_track_return
+  - ask_return_non_functional
+  - ask_refund_gift_purchase
+  - ask_return_incompatible
+  - ask_create_account
+  - ask_account_required
+  - ask_update_profile
+  - ask_change_username
+  - ask_profile_picture
+  - ask_reset_password
+  - ask_forgot_username
+  - ask_delete_account
+  - ask_order_history_deletion
+  - ask_view_order_history
+  - ask_download_invoices
+  - ask_update_newsletter_preferences
+  - ask_opt_out_promotional_emails
+  - ask_two_factor_authentication
+  - ask_update_security_settings
+  - ask_access_data
+  - ask_data_retention_policy
+  - ask_merge_accounts
+  - ask_multiple_accounts
+  - ask_cannot_login
+  - ask_contact_support_account
+  - ask_change_email
+  - ask_update_billing_address
+  - ask_update_shipping_address
+  - ask_save_multiple_shipping_addresses
+  - ask_view_saved_payment_methods
+  - ask_update_payment_method
+  - ask_subscription_services
+  - ask_loyalty_points
+  - ask_change_notification_preferences
+  - ask_contact_technical_support
+  - ask_troubleshooting_guides
+  - ask_software_update
+  - ask_device_support
+  - ask_error_message
+  - ask_install_setup
+  - ask_recover_account
+  - ask_recover_data
+  - ask_slow_performance
+  - ask_report_security_vulnerability
+  - ask_privacy_policy
+  - ask_terms_of_service
+  - ask_refund_policy
+  - ask_shipping_policy
+  - ask_return_policy_3
+  - ask_product_warranty
+  - ask_customer_data_protection
+  - ask_cookies
+  - ask_use_content
+  - ask_dispute_resolution
+  - ask_cancellation_policy
+  - ask_data_protection_laws
+  - ask_refund_defective_product_2
+  - ask_exchange
+  - ask_lost_delayed_order
+  - ask_return_dislike
+  - ask_intellectual_property
+  - ask_liability_damages
+  - ask_use_content_personal_commercial
+  - ask_report_security_vulnerability_2
+  - ask_payment_methods_2
+  - ask_payment_security_2
+  - ask_refund_digital_product_2
+  - ask_change_order_after_payment_2
+  - ask_international_shipping_2
+  - ask_customer_data_retention
+  - ask_request_data_copy
+  - ask_warranty_physical_products
+  - ask_use_website_content_educational
+  - ask_contact_legal_inquiries
+  - ask_business_name
+  - ask_what_you_sell
+  - ask_business_location
+  - ask_contact
+  - ask_business_hours
+  - ask_promotions_discounts
+  - ask_stay_updated_deals
+  - ask_shipping_options_2
+  - ask_international_shipping_3
+  - ask_return_policy_4
+  - ask_refund_policy_2
+  - ask_help_order
+  - ask_live_chat_support
+  - ask_social_media
+  - ask_social_media_platforms
+  - ask_job_opportunities
+  - ask_business_partnership
+  - ask_faq
+  - ask_common_questions
+  - ask_provide_feedback
+  - ask_file_complaint
+  - ask_complaint_resolution
+  - ask_product_warranty_2
+  - ask_use_website_content_2
+  - ask_po_box_shipping_2
+  - ask_change_order_after_payment_3
+  - ask_gift_cards_2
+  - ask_track_order_3
+  - ask_payment_methods_3
+  - ask_payment_security_3
 
 responses:
-  utter_greet:
-    - text: "Hello! How can I help you today?"
-  utter_goodbye:
-    - text: "Goodbye! Have a great day!"
-  utter_default:
-    - text: "I'm sorry, I didn't understand that. Can you please rephrase?"
+  utter_ask_products:
+    - text: "We sell clothing and digital goods like wallpapers, CCs, overlays, and live wallpapers."
 
-actions:
-  - action_search_shopify
+  utter_ask_product_availability:
+    - text: "For digital products, they are always available. For physical products, you can check availability while purchasing. If it’s out of stock, it cannot be purchased."
+
+  utter_recommend_product:
+    - text: "We offer a variety of clothing and digital goods. You can browse our collection to find what suits your needs."
+
+  utter_ask_product_features:
+    - text: "Our products are straightforward with no unique features. You can find detailed information by clicking on the product."
+
+  utter_ask_product_price:
+    - text: "Pricing depends on the product. You can view the price on the product page."
+
+  utter_ask_product_customization:
+    - text: "Physical products can be customized in color and size (additional cost may apply for size). Digital products cannot be customized."
+
+  utter_ask_product_images:
+    - text: "Yes, you can view more pictures by clicking on the product."
+
+  utter_ask_product_dimensions:
+    - text: "Dimensions are listed on the product page for physical items. Digital products do not have dimensions."
+
+  utter_ask_product_suitability:
+    - text: "Our products are designed for general use. You can check the product description for more details."
+
+  utter_ask_product_warranty:
+    - text: "No, we do not offer warranties for physical or digital products. All sales are final."
+
+  utter_ask_product_reviews:
+    - text: "Yes, we provide reviews and ratings for our products. You can find them on the product page."
+
+  utter_ask_product_customization_options:
+    - text: "Physical products can be customized in color and size (additional cost may apply for size). Digital products cannot be customized."
+
+  utter_ask_product_eco_friendliness:
+    - text: "Our products do not have unique features like eco-friendliness."
+
+  utter_ask_product_materials:
+    - text: "Material details are listed on the product page for physical items. Digital products do not have materials."
+
+  utter_ask_product_usage:
+    - text: "Usage instructions are provided on the product page."
+
+  utter_ask_product_safety:
+    - text: "Our products are designed for general use. Please check the product description for age recommendations."
+
+  utter_ask_product_sample:
+    - text: "No, we do not provide samples or demos, even if customers are willing to pay."
+
+  utter_ask_product_shelf_life:
+    - text: "Digital products do not have a shelf life. For physical products, durability depends on usage and care."
+
+  utter_ask_product_vegan:
+    - text: "Our products do not have unique features like vegan or cruelty-free certifications."
+
+  utter_ask_product_assembly:
+    - text: "Most of our products do not require assembly. Check the product description for details."
+
+  utter_ask_product_accessories:
+    - text: "Accessories, if any, are listed on the product page."
+
+  utter_ask_pre_order:
+    - text: "No, we do not have a pre-order or backorder system."
+
+  utter_ask_international_availability:
+    - text: "Digital products are available internationally, except in Israel. Physical products are not available in Europe and Israel."
+
+  utter_ask_product_weight:
+    - text: "Weight details are listed on the product page for physical items. Digital products do not have weight."
+
+  utter_ask_product_sizes:
+    - text: "Physical products are available in different sizes (additional cost may apply). Digital products do not have size options."
+
+  utter_ask_discount:
+    - text: "We occasionally offer discounts. Check the product page or subscribe to our newsletter for updates."
+
+  utter_ask_product_compatibility:
+    - text: "Compatibility details are listed on the product page."
+
+  utter_ask_return_policy:
+    - text: "All sales are final. We do not accept returns or offer replacements."
+
+  utter_ask_order_tracking:
+    - text: "Yes, you can track your order using the tracking information provided after purchase."
+
+  utter_ask_wholesale:
+    - text: "We do not currently offer wholesale options."
+
+  utter_ask_place_order:
+    - text: "You can place an order just like on any other online store. Simply add items to your cart and proceed to checkout."
+
+  utter_ask_payment_methods:
+    - text: "We accept PayPal, Google Pay, Apple Pay, American Express, Visa, and Mastercard."
+
+  utter_ask_shipping_time:
+    - text: "Digital products are delivered instantly (within 2-3 minutes). Physical products take 7-30 business days, depending on your location."
+
+  utter_ask_shipping_cost:
+    - text: "Shipping costs depend on your country. You can view the exact cost during checkout."
+
+  utter_ask_refund_policy:
+    - text: "We do not offer refunds. However, if you did not receive a digital product, please contact us at xbitzor@xbitzor.shop."
+
+  utter_ask_customer_data_protection:
+    - text: "We use secure payment systems and follow industry standards to protect customer data."
+
+  utter_ask_contact_support_account:
+    - text: "Email xbitzor@xbitzor.shop for any account-related concerns."
+
+  utter_ask_social_media:
+    - text: "Yes, you can follow us on Instagram, TikTok, and YouTube."
+
+  utter_ask_faq:
+    - text: "You can ask the chatbot for answers to common questions or contact us through the contact page."
+
+  utter_ask_terms_of_service:
+    - text: "By using our website and purchasing our products, you agree to our Terms of Service. You can read the full terms on our website."
+
+  utter_ask_shipping_policy:
+    - text: "Physical orders are processed and shipped within 7-30 business days. Digital products are delivered instantly."
+
+  utter_ask_refund_lost_order:
+    - text: "If your package is lost, please contact us at xbitzor@xbitzor.shop, and we will assist you in resolving the issue."
+
+  utter_ask_track_order:
+    - text: "Yes! Once your order ships, you’ll receive a tracking confirmation email with a tracking link."
+
+  utter_ask_business_name:
+    - text: "Our business name is Xbitzor."
+
+  utter_ask_what_you_sell:
+    - text: "We sell clothing and digital goods like wallpapers, overlays, and live wallpapers."
+
+  utter_ask_contact:
+    - text: "You can contact us through the contact page on our website."
+
+  utter_ask_business_hours:
+    - text: "You can reach us anytime through the contact page, and we’ll respond as soon as possible."
+
+  utter_ask_complaint_resolution:
+    - text: "We aim to resolve complaints as quickly as possible. Contact us through the contact page for assistance."
+
+  utter_ask_return_policy_2:
+    - text: "We do not accept returns since our products are made on demand. All sales are final."
+
+  utter_ask_return_product_dislike:
+    - text: "No, we do not accept returns or offer refunds. All sales are final."
+
+  utter_ask_refund_defective_product:
+    - text: "We do not offer refunds, but if your product arrives defective or damaged, please contact us at xbitzor@xbitzor.shop with photos of the issue within 1 day of delivery. We will work with our supplier to find a solution."
+
+  utter_ask_return_label:
+    - text: "We do not accept returns, so return labels are not provided."
+
+  utter_ask_refund_digital_product:
+    - text: "We do not offer refunds for digital products. However, if you did not receive your digital product, please contact us at xbitzor@xbitzor.shop for assistance."
+
+  utter_ask_return_status:
+    - text: "We do not accept returns, so this does not apply."
+
+  utter_ask_payment_security:
+    - text: "Yes, we use Shopify’s secure payment system, which follows industry standards to protect your information."
+
+  utter_ask_social_media_platforms:
+    - text: "We are active on Instagram, TikTok, and YouTube."
+
+  utter_ask_discount_code:
+    - text: "We do not currently offer discount codes."
+
+  utter_ask_gift_cards:
+    - text: "No, we do not currently offer gift cards."
+
+  utter_ask_apple_pay:
+    - text: "Yes, we accept Apple Pay."
+
+  utter_ask_google_pay:
+    - text: "Yes, we accept Google Pay."
+
+  utter_ask_cash_on_delivery:
+    - text: "No, we do not offer cash on delivery."
+
+  utter_ask_change_order_after_payment:
+    - text: "No, orders cannot be changed after payment."
+
+  utter_ask_payment_success:
+    - text: "You’ll receive an order confirmation email once your payment is processed successfully."
+
+  utter_ask_refund_overpayment:
+    - text: "No, we do not offer refunds."
+
+  utter_ask_shipping_insurance:
+    - text: "No, we do not offer shipping insurance at this time."
+
+  utter_ask_exchange:
+    - text: "No, we do not offer exchanges. All sales are final."
+
+  utter_ask_return_opened_product:
+    - text: "No, we do not accept returns, even if the product is opened."
+
+  utter_ask_refund_sale_items:
+    - text: "No, we do not offer refunds for any items, including sale items."
+
+  utter_ask_privacy_policy:
+    - text: "Our privacy policy explains how we collect and protect customer data. You can read it on our website."
+
+  utter_ask_contact_support_return:
+    - text: "If your product arrives defective or damaged, please contact us at xbitzor@xbitzor.shop with photos of the issue within 1 day of delivery."
+
+  utter_ask_multiple_address_shipping:
+    - text: "No, we do not support shipping to multiple addresses for a single order."
+
+  utter_ask_contact_technical_support:
+    - text: "You can ask the chatbot for assistance with any technical issues."
+
+  utter_ask_troubleshooting_guides:
+    - text: "The chatbot can guide you through troubleshooting steps for any issues you’re facing."
+
+  utter_ask_terms_of_service2:
+    - text: "By using our website and purchasing our products, you agree to our Terms of Service. You can read the full terms on our website."
+
+  utter_ask_international_shipping:
+    - text: "Yes, digital products are available internationally (except in Israel). Physical products are not shipped to Europe or Israel."
+
+  utter_ask_contact_legal_inquiries:
+    - text: "For any legal inquiries, please contact us at xbitzor@xbitzor.shop."
+
+  utter_ask_request_data_copy:
+    - text: "Yes, you can request a data download by emailing xbitzor@xbitzor.shop."
+
+  utter_ask_use_content:
+    - text: "No, all content on our website, including text, images, logos, and designs, is protected and may not be used without permission."
+
+  utter_ask_dispute_resolution:
+    - text: "Disputes can be resolved through mediation. For assistance, please contact us at xbitzor@xbitzor.shop."
+
+  utter_ask_customer_data_retention:
+    - text: "We retain customer data only as needed for order fulfillment and legal purposes. Deleted accounts are permanently removed."
+
+  utter_ask_liability_damages:
+    - text: "We are not responsible for any indirect, incidental, or consequential damages arising from the use of our products or website."
+
+  utter_ask_data_protection_laws:
+    - text: "We follow industry standards to protect customer data. For more details, please refer to our privacy policy."
+
+  utter_ask_loyalty_points:
+    - text: "No, we do not currently offer a loyalty or rewards program."
+
+  utter_ask_shipping_estimate:
+    - text: "Yes, you can view the shipping cost and estimated delivery time during checkout."
+
+  utter_ask_shipping_confirmation:
+    - text: "Yes! Once your order ships, you’ll receive a shipping confirmation email with tracking details."
+
+  utter_ask_carbon_neutral_shipping:
+    - text: "No, we do not offer carbon-neutral shipping at this time."
+
+  utter_ask_track_return:
+    - text: "We do not accept returns, so this does not apply."
+
+  utter_ask_product_warranty_2:
+    - text: "No, we do not offer warranties for physical or digital products."
+
+  utter_ask_account_required:
+    - text: "No, you can checkout as a guest without creating an account."
+
+  utter_ask_update_profile:
+    - text: "Log into your account and go to the 'Account Settings' or 'Profile' section to update your details."
+
+  utter_ask_change_username:
+    - text: "No, username changes are not allowed."
+
+  utter_ask_reset_password:
+    - text: "Click 'Forgot Password' on the login page and follow the instructions to reset your password via email."
+
+  utter_ask_forgot_username:
+    - text: "Usernames are not required. Use your registered email to log in."
+
+  utter_ask_delete_account:
+    - text: "Yes, you can request account deletion by contacting support at xbitzor@xbitzor.shop."
+
+  utter_ask_order_history_deletion:
+    - text: "Once an account is deleted, all data, including order history, is permanently removed and cannot be recovered."
+
+  utter_ask_view_order_history:
+    - text: "Log into your account and go to the 'Orders' section to view past purchases."
+
+  utter_ask_download_invoices:
+    - text: "No, but you can find your receipt in the order confirmation email sent after purchase."
+
+  utter_ask_update_newsletter_preferences:
+    - text: "You can unsubscribe or update preferences via the link in any marketing email."
+
+  utter_ask_opt_out_promotional_emails:
+    - text: "Yes, click 'Unsubscribe' at the bottom of any promotional email."
+
+  utter_ask_two_factor_authentication:
+    - text: "No, 2FA is not currently available."
+
+  utter_ask_update_security_settings:
+    - text: "You can change your password in the 'Account Settings' section."
+
+  utter_ask_access_data:
+    - text: "You can request a data download by emailing xbitzor@xbitzor.shop."
+
+  utter_ask_merge_accounts:
+    - text: "No, merging multiple accounts is not supported."
+
+  utter_ask_multiple_accounts:
+    - text: "Since merging accounts is not possible, you must choose one account to continue using."
+
+  utter_ask_cannot_login:
+    - text: "Try resetting your password first. If the issue persists, contact support at xbitzor@xbitzor.shop."
+
+  utter_ask_change_email:
+    - text: "Yes, you can update your email address in the 'Account Settings' section."
+
+  utter_ask_update_billing_address:
+    - text: "Yes, you can update your billing address in the 'Account Settings' section."
+
+  utter_ask_update_shipping_address:
+    - text: "Yes, you can update your shipping address in the 'Account Settings' section."
+
+  utter_ask_save_multiple_shipping_addresses:
+    - text: "No, we do not support saving multiple shipping addresses."
+
+  utter_ask_view_saved_payment_methods:
+    - text: "No, saved payment methods are not supported at this time."
+
+  utter_ask_update_payment_method:
+    - text: "Yes, you can update your payment method in the 'Account Settings' section."
+
+  utter_ask_subscription_services:
+    - text: "No, we do not currently offer subscription services."
+
+  utter_ask_change_notification_preferences:
+    - text: "Yes, you can update your notification preferences in the 'Account Settings' section."
+
+  utter_ask_payment_methods_2:
+    - text: "We accept payments through PayPal."
+
+  utter_ask_payment_security_2:
+    - text: "Yes, all transactions are securely processed through third-party payment providers."
+
+  utter_ask_change_order_after_payment_2:
+    - text: "No, orders cannot be changed after payment."
+
+  utter_ask_refund_digital_product_2:
+    - text: "No, we do not offer refunds for digital products. However, if you did not receive your digital product, please contact us at xbitzor@xbitzor.shop."
+
+  utter_ask_international_shipping_2:
+    - text: "Yes, we ship internationally, except to Israel. Additional fees may apply depending on the destination."
+
+  utter_ask_use_website_content_educational:
+    - text: "No, all content on our website is protected and may not be used without permission."
+
+  utter_ask_contact_legal_inquiries2:
+    - text: "For any legal inquiries, please contact us at xbitzor@xbitzor.shop."
+
+  utter_ask_use_content_personal_commercial:
+    - text: "No, all content on our website is protected and may not be used without permission."
+
+  utter_ask_complaint_resolution2:
+    - text: "We aim to resolve complaints as quickly as possible. Contact us through the contact page for assistance."
+
+  utter_ask_report_security_vulnerability:
+    - text: "Please describe the issue to the chatbot, and it will guide you on how to report it."
+
+  utter_ask_report_security_vulnerability_2:
+    - text: "Please contact us at xbitzor@xbitzor.shop to report any security vulnerabilities."
+
+  utter_ask_shipping_options_2:
+    - text: "Physical orders are processed and shipped within 7-30 business days. Digital products are delivered instantly (within 2-3 minutes)."
+
+  utter_ask_return_policy_4:
+    - text: "We do not accept returns or offer refunds. All sales are final."
+
+  utter_ask_help_order:
+    - text: "You can contact us through the contact page or ask the chatbot for assistance."
+
+  utter_ask_live_chat_support:
+    - text: "No, but you can ask the chatbot for help or contact us through the contact page."
+
+  utter_ask_social_media2:
+    - text: "Yes, you can follow us on Instagram, TikTok, and YouTube."
+
+  utter_ask_social_media_platforms2:
+    - text: "We are active on Instagram, TikTok, and YouTube."
+
+  utter_ask_job_opportunities:
+    - text: "No, we do not currently offer job opportunities or internships."
+
+  utter_ask_business_partnership:
+    - text: "No, we are not looking for business partners at this time."
+
+  utter_ask_provide_feedback:
+    - text: "You can share your feedback through the contact page on our website."
+
+  utter_ask_file_complaint:
+    - text: "Please contact us through the contact page, and we’ll do our best to assist you."
+
+  utter_ask_complaint_resolution3:
+    - text: "We aim to resolve complaints as quickly as possible. Contact us through the contact page for assistance."
+
+  utter_ask_product_warranty_3:
+    - text: "No, our products do not come with a warranty. All sales are final."
+
+  utter_ask_use_website_content_2:
+    - text: "No, all content on our website, including text, images, logos, and designs, is our property and may not be used without permission."
+
+  utter_ask_po_box_shipping_2:
+    - text: "No, we do not ship to P.O. Boxes at this time."
+
+  utter_ask_change_order_after_payment_3:
+    - text: "No, once an order is placed, it cannot be changed."
+
+  utter_ask_gift_cards_2:
+    - text: "No, we do not currently offer gift cards."
+
+  utter_ask_track_order_3:
+    - text: "Yes, you will receive an email with tracking details once your order ships."
+
+  utter_ask_payment_methods_3:
+    - text: "We accept PayPal, Google Pay, Apple Pay, American Express, Visa, and Mastercard."
+
+  utter_ask_payment_security_3:
+    - text: "Yes, we use secure payment processing to protect your transactions and personal information."
 
 session_config:
   session_expiration_time: 60

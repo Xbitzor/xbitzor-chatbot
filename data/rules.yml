@@ -1,13 +1,92 @@
 version: "3.1"
 
 rules:
+  - rule: Respond to product availability
+    steps:
+      - intent: ask_product_availability
+      - action: utter_ask_product_availability
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Respond to product recommendations
+    steps:
+      - intent: recommend_product
+      - action: utter_recommend_product
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_default
+  - rule: Respond to product features
+    steps:
+      - intent: ask_product_features
+      - action: utter_ask_product_features
+
+  - rule: Respond to product price
+    steps:
+      - intent: ask_product_price
+      - action: utter_ask_product_price
+
+  - rule: Respond to product customization
+    steps:
+      - intent: ask_product_customization
+      - action: utter_ask_product_customization
+
+  - rule: Respond to product images
+    steps:
+      - intent: ask_product_images
+      - action: utter_ask_product_images
+
+  - rule: Respond to product dimensions
+    steps:
+      - intent: ask_product_dimensions
+      - action: utter_ask_product_dimensions
+
+  - rule: Respond to product suitability
+    steps:
+      - intent: ask_product_suitability
+      - action: utter_ask_product_suitability
+
+  - rule: Respond to product warranty
+    steps:
+      - intent: ask_product_warranty
+      - action: utter_ask_product_warranty
+
+  - rule: Respond to product reviews
+    steps:
+      - intent: ask_product_reviews
+      - action: utter_ask_product_reviews
+
+  - rule: Respond to return policy
+    steps:
+      - intent: ask_return_policy
+      - action: utter_ask_return_policy
+
+  - rule: Respond to shipping options
+    steps:
+      - intent: ask_shipping_options
+      - action: utter_ask_shipping_options
+
+  - rule: Respond to payment methods
+    steps:
+      - intent: ask_payment_methods
+      - action: utter_ask_payment_methods
+
+  - rule: Respond to order tracking
+    steps:
+      - intent: ask_order_tracking
+      - action: utter_ask_order_tracking
+
+  - rule: Respond to account creation
+    steps:
+      - intent: ask_create_account
+      - action: utter_ask_create_account
+
+  - rule: Respond to password reset
+    steps:
+      - intent: ask_reset_password
+      - action: utter_ask_reset_password
+
+  - rule: Respond to delete account
+    steps:
+      - intent: ask_delete_account
+      - action: utter_ask_delete_account
+
+  - rule: Respond to contact support
+    steps:
+      - intent: ask_contact_support_account
+      - action: utter_ask_contact_support_account

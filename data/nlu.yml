@@ -1,68 +1,902 @@
-version: "3.0"
+version: "3.1"
 
 nlu:
-  - intent: search_product
+  - intent: ask_products
     examples: |
-      - Find [product name]
-      - Search for [product name]
-      - Do you have [product name]?
-      - Can you find [product name]?
-      - Show me [product name]
-
-  - intent: legal_policies
+      - What products do you sell?
+      - What do you sell?
+      - What kind of products do you offer?
+  
+  - intent: ask_product_availability
     examples: |
-      - What is your refund policy?
-      - Can I get a refund?
-      - Tell me about your return policy.
-      - What is your privacy policy?
-      - Where can I find your terms of service?
-      - Do you have a shipping policy?
-      - What are your legal policies?
-
-  - intent: shipping_info
-    examples: |
-      - Tell me about your shipping information.
-      - What are your shipping options?
-      - How long does shipping take?
-      - Do you offer free shipping?
-      - What countries do you ship to?
-
-  - intent: payment_terms
-    examples: |
-      - What are your payment terms?
-      - How do I pay for my order?
-      - What payment methods do you accept?
-      - Can I pay with PayPal?
-      - Do you accept credit cards?
-
-  - intent: price_rules
-    examples: |
-      - What are your price rules?
-      - Do you offer discounts?
-      - Are there any special offers?
-      - Tell me about your pricing.
-      - What discounts do you have?
-
-  - intent: check_inventory
-    examples: |
-      - Check inventory for [product name]
+      - Do you have [product name] in stock?
+      - Is [product name] available?
       - Is [product name] in stock?
-      - How many [product name] do you have?
-      - Do you have [product name] available?
-      - What's the stock level for [product name]?
-
-  - intent: product_listings
+  
+  - intent: recommend_product
     examples: |
-      - Show me all products
-      - List all products
-      - What products do you have?
-      - Can you show me your product catalog?
-      - Display your product listings
-
-  - intent: content_search
+      - Can you recommend a product for [specific need]?
+      - What product do you recommend for [specific need]?
+      - Do you have any recommendations for [specific need]?
+  
+  - intent: ask_product_features
     examples: |
-      - Find [page name]
-      - Search for [page name]
-      - Do you have a page about [topic]?
-      - Can you find [page name]?
-      - Show me [page name]
+      - What are the features of [product name]?
+      - Does [product name] have any special features?
+      - What features does [product name] have?
+  
+  - intent: ask_product_price
+    examples: |
+      - How much does [product name] cost?
+      - What is the price of [product name]?
+      - How much is [product name]?
+  
+  - intent: ask_product_customization
+    examples: |
+      - Is [product name] available in [color/size]?
+      - Can I customize [product name]?
+      - Can I get [product name] in [color/size]?
+  
+  - intent: ask_product_images
+    examples: |
+      - Can I see more pictures of [product name]?
+      - Do you have more images of [product name]?
+      - Can you show me more pictures of [product name]?
+  
+  - intent: ask_product_dimensions
+    examples: |
+      - What are the dimensions of [product name]?
+      - How big is [product name]?
+      - What size is [product name]?
+  
+  - intent: ask_product_suitability
+    examples: |
+      - Is [product name] suitable for [specific use]?
+      - Can I use [product name] for [specific use]?
+      - Is [product name] good for [specific use]?
+  
+  - intent: ask_product_warranty
+    examples: |
+      - Does [product name] come with a warranty?
+      - Is there a warranty for [product name]?
+      - Do you offer a warranty for [product name]?
+  
+  - intent: ask_product_reviews
+    examples: |
+      - Are there any reviews for [product name]?
+      - Can I see reviews for [product name]?
+      - What do customers say about [product name]?
+  
+  - intent: ask_product_customization_options
+    examples: |
+      - Can I customize [product name]?
+      - Can I change the color or size of [product name]?
+      - Are there customization options for [product name]?
+  
+  - intent: ask_product_eco_friendliness
+    examples: |
+      - Is [product name] eco-friendly?
+      - Is [product name] environmentally friendly?
+      - Is [product name] sustainable?
+  
+  - intent: ask_product_materials
+    examples: |
+      - What materials are used in [product name]?
+      - What is [product name] made of?
+      - What materials are in [product name]?
+  
+  - intent: ask_product_usage
+    examples: |
+      - How do I use [product name]?
+      - What are the instructions for [product name]?
+      - How does [product name] work?
+  
+  - intent: ask_product_safety
+    examples: |
+      - Is [product name] safe for children?
+      - Can kids use [product name]?
+      - Is [product name] safe for kids?
+  
+  - intent: ask_product_sample
+    examples: |
+      - Can I get a sample of [product name]?
+      - Do you offer samples of [product name]?
+      - Can I try a sample of [product name]?
+  
+  - intent: ask_product_shelf_life
+    examples: |
+      - What is the shelf life of [product name]?
+      - How long does [product name] last?
+      - Does [product name] expire?
+  
+  - intent: ask_product_vegan
+    examples: |
+      - Is [product name] vegan/cruelty-free?
+      - Is [product name] vegan?
+      - Is [product name] cruelty-free?
+  
+  - intent: ask_product_assembly
+    examples: |
+      - Does [product name] require assembly?
+      - Do I need to assemble [product name]?
+      - Is [product name] pre-assembled?
+  
+  - intent: ask_product_accessories
+    examples: |
+      - What accessories come with [product name]?
+      - Does [product name] come with any accessories?
+      - What’s included with [product name]?
+  
+  - intent: ask_pre_order
+    examples: |
+      - Can I pre-order [product name]?
+      - Do you offer pre-orders for [product name]?
+      - Can I reserve [product name]?
+  
+  - intent: ask_international_availability
+    examples: |
+      - Is [product name] available internationally?
+      - Do you ship [product name] internationally?
+      - Can I get [product name] in [country]?
+  
+  - intent: ask_product_weight
+    examples: |
+      - What is the weight of [product name]?
+      - How much does [product name] weigh?
+      - Is [product name] heavy?
+  
+  - intent: ask_product_sizes
+    examples: |
+      - Does [product name] come in different sizes?
+      - What sizes are available for [product name]?
+      - Can I get [product name] in [size]?
+  
+  - intent: ask_discount
+    examples: |
+      - Can I get a discount on [product name]?
+      - Do you offer discounts on [product name]?
+      - Is there a discount for [product name]?
+  
+  - intent: ask_product_compatibility
+    examples: |
+      - Is [product name] compatible with [other product]?
+      - Can I use [product name] with [other product]?
+      - Does [product name] work with [other product]?
+  
+  - intent: ask_return_policy
+    examples: |
+      - What is the return policy for [product name]?
+      - Can I return [product name]?
+      - Do you accept returns for [product name]?
+  
+  - intent: ask_order_tracking
+    examples: |
+      - Can I track my order for [product name]?
+      - How do I track my order for [product name]?
+      - Where is my order for [product name]?
+  
+  - intent: ask_wholesale
+    examples: |
+      - Is [product name] available for wholesale?
+      - Do you offer wholesale for [product name]?
+      - Can I buy [product name] in bulk?
+  
+  - intent: ask_place_order
+    examples: |
+      - How do I place an order?
+      - How can I order [product name]?
+      - What’s the process for placing an order?
+  
+  - intent: ask_payment_methods
+    examples: |
+      - What payment methods do you accept?
+      - How can I pay for [product name]?
+      - Do you accept credit cards?
+  
+  - intent: ask_paypal
+    examples: |
+      - Can I pay with PayPal?
+      - Do you accept PayPal?
+      - Is PayPal an option?
+  
+  - intent: ask_cryptocurrency
+    examples: |
+      - Do you accept cryptocurrency?
+      - Can I pay with Bitcoin?
+      - Do you take crypto payments?
+  
+  - intent: ask_minimum_order
+    examples: |
+      - Is there a minimum order amount?
+      - Do I need to order a minimum amount?
+      - What’s the minimum order?
+  
+  - intent: ask_cancel_order
+    examples: |
+      - Can I cancel my order?
+      - How do I cancel my order?
+      - Is it possible to cancel an order?
+  
+  - intent: ask_track_order
+    examples: |
+      - How do I track my order?
+      - Can I track my order?
+      - Where is my order?
+  
+  - intent: ask_change_payment_method
+    examples: |
+      - Can I change my payment method after placing an order?
+      - Can I update my payment method?
+      - Can I switch payment methods?
+  
+  - intent: ask_installment_payments
+    examples: |
+      - Do you offer installment payments?
+      - Can I pay in installments?
+      - Do you have payment plans?
+  
+  - intent: ask_invoice
+    examples: |
+      - Can I get an invoice for my order?
+      - How do I get an invoice?
+      - Can I download an invoice?
+  
+  - intent: ask_payment_security
+    examples: |
+      - Is my payment information secure?
+      - How secure is my payment?
+      - Is it safe to pay on your site?
+  
+  - intent: ask_multiple_payment_methods
+    examples: |
+      - Can I use multiple payment methods for one order?
+      - Can I split my payment?
+      - Can I pay with two different methods?
+  
+  - intent: ask_first_time_discount
+    examples: |
+      - Do you offer discounts for first-time customers?
+      - Is there a discount for new customers?
+      - Can I get a discount as a first-time buyer?
+  
+  - intent: ask_refund_cancel_order
+    examples: |
+      - Can I get a refund if I cancel my order?
+      - Can I get my money back if I cancel?
+      - Do you refund canceled orders?
+  
+  - intent: ask_discount_code
+    examples: |
+      - How do I apply a discount code?
+      - Can I use a discount code?
+      - Do you have discount codes?
+  
+  - intent: ask_split_payment
+    examples: |
+      - Can I split my payment into two methods?
+      - Can I pay with two different cards?
+      - Can I split the payment?
+  
+  - intent: ask_gift_cards
+    examples: |
+      - Do you offer gift cards?
+      - Can I buy a gift card?
+      - Do you have gift cards?
+  
+  - intent: ask_apple_pay
+    examples: |
+      - Can I pay with Apple Pay?
+      - Do you accept Apple Pay?
+      - Is Apple Pay supported?
+  
+  - intent: ask_international_credit_cards
+    examples: |
+      - Do you accept international credit cards?
+      - Can I use a foreign credit card?
+      - Do you take international cards?
+  
+  - intent: ask_receipt
+    examples: |
+      - Can I get a receipt for my order?
+      - How do I get a receipt?
+      - Can I download a receipt?
+  
+  - intent: ask_credit_card_fee
+    examples: |
+      - Is there a fee for using a credit card?
+      - Do you charge extra for credit cards?
+      - Are there fees for credit card payments?
+  
+  - intent: ask_google_pay
+    examples: |
+      - Can I pay with Google Pay?
+      - Do you accept Google Pay?
+      - Is Google Pay supported?
+  
+  - intent: ask_cash_on_delivery
+    examples: |
+      - Do you offer cash on delivery?
+      - Can I pay with cash on delivery?
+      - Is cash on delivery an option?
+  
+  - intent: ask_change_order_after_payment
+    examples: |
+      - Can I change my order after payment?
+      - Can I update my order after paying?
+      - Can I modify my order after payment?
+  
+  - intent: ask_payment_success
+    examples: |
+      - How do I know if my payment was successful?
+      - Did my payment go through?
+      - How can I check if my payment was successful?
+  
+  - intent: ask_refund_overpayment
+    examples: |
+      - Can I get a refund if I overpaid?
+      - What if I paid too much?
+      - Can I get my money back if I overpaid?
+  
+  - intent: ask_payment_plans
+    examples: |
+      - Do you offer payment plans?
+      - Can I pay in installments?
+      - Do you have payment plans?
+  
+  - intent: ask_debit_card
+    examples: |
+      - Can I pay with a debit card?
+      - Do you accept debit cards?
+      - Can I use a debit card?
+  
+  - intent: ask_checks
+    examples: |
+      - Do you accept checks?
+      - Can I pay with a check?
+      - Do you take checks?
+  
+  - intent: ask_refund_change_mind
+    examples: |
+      - Can I get a refund if I change my mind?
+      - Can I return a product if I don’t like it?
+      - Can I get my money back if I change my mind?
+  
+  - intent: ask_shipping_options
+    examples: |
+      - What are your shipping options?
+      - How do you ship products?
+      - What shipping methods do you offer?
+  
+  - intent: ask_shipping_cost
+    examples: |
+      - How much does shipping cost?
+      - What’s the shipping fee?
+      - How much is shipping?
+  
+  - intent: ask_free_shipping
+    examples: |
+      - Do you offer free shipping?
+      - Is shipping free?
+      - Do you have free shipping?
+  
+  - intent: ask_shipping_time
+    examples: |
+      - How long does shipping take?
+      - When will my order arrive?
+      - How fast is shipping?
+  
+  - intent: ask_track_order
+    examples: |
+      - Can I track my order?
+      - How do I track my order?
+      - Where is my order?
+  
+  - intent: ask_international_shipping
+    examples: |
+      - Do you ship internationally?
+      - Can I get [product name] in [country]?
+      - Do you ship to [country]?
+  
+  - intent: ask_delivery_time
+    examples: |
+      - What is the estimated delivery time?
+      - When will my order arrive?
+      - How long will it take to get my order?
+  
+  - intent: ask_change_shipping_address
+    examples: |
+      - Can I change my shipping address after placing an order?
+      - Can I update my shipping address?
+      - Can I change where my order is shipped?
+  
+  - intent: ask_express_shipping
+    examples: |
+      - Do you offer express shipping?
+      - Can I get faster shipping?
+      - Do you have expedited shipping?
+  
+  - intent: ask_pickup_in_store
+    examples: |
+      - Can I pick up my order in-store?
+      - Can I collect my order in person?
+      - Do you have in-store pickup?
+  
+  - intent: ask_shipping_carriers
+    examples: |
+      - What carriers do you use for shipping?
+      - Who delivers your products?
+      - Which shipping companies do you use?
+  
+  - intent: ask_same_day_delivery
+    examples: |
+      - Can I get same-day delivery?
+      - Do you offer same-day shipping?
+      - Can I get my order today?
+  
+  - intent: ask_po_box_shipping
+    examples: |
+      - Do you ship to PO boxes?
+      - Can I have my order sent to a PO box?
+      - Do you deliver to PO boxes?
+  
+  - intent: ask_schedule_delivery
+    examples: |
+      - Can I schedule a delivery time?
+      - Can I choose when my order is delivered?
+      - Can I pick a delivery time?
+  
+  - intent: ask_cutoff_time
+    examples: |
+      - What is the cutoff time for same-day shipping?
+      - When is the latest I can order for same-day delivery?
+      - What’s the cutoff for same-day shipping?
+  
+  - intent: ask_overnight_shipping
+    examples: |
+      - Do you offer overnight shipping?
+      - Can I get my order tomorrow?
+      - Do you have overnight delivery?
+  
+  - intent: ask_tracking_number
+    examples: |
+      - Can I get a tracking number for my order?
+      - How do I track my order?
+      - Where is my tracking number?
+  
+  - intent: ask_apo_fpo_shipping
+    examples: |
+      - Do you ship to APO/FPO addresses?
+      - Can I have my order sent to an APO/FPO address?
+      - Do you deliver to military addresses?
+  
+  - intent: ask_change_shipping_method
+    examples: |
+      - Can I change my shipping method after placing an order?
+      - Can I update my shipping method?
+      - Can I switch shipping methods?
+  
+  - intent: ask_free_shipping_over_amount
+    examples: |
+      - Do you offer free shipping for orders over [amount]?
+      - Is there free shipping for large orders?
+      - Do you have free shipping for orders over [amount]?
+  
+  - intent: ask_refund_late_delivery
+    examples: |
+      - Can I get a refund if my order is late?
+      - What if my order is delayed?
+      - Can I get my money back if my order is late?
+  
+  - intent: ask_shipping_country
+    examples: |
+      - Do you ship to [country]?
+      - Can I get [product name] in [country]?
+      - Do you deliver to [country]?
+  
+  - intent: ask_shipping_confirmation
+    examples: |
+      - Can I get a shipping confirmation email?
+      - Will I get a shipping confirmation?
+      - How do I know when my order ships?
+  
+  - intent: ask_carbon_neutral_shipping
+    examples: |
+      - Do you offer carbon-neutral shipping?
+      - Is your shipping eco-friendly?
+      - Do you have carbon-neutral delivery?
+  
+  - intent: ask_refund_lost_order
+    examples: |
+      - Can I get a refund if my order is lost?
+      - What if my order is lost?
+      - Can I get my money back if my order is lost?
+  
+  - intent: ask_multiple_address_shipping
+    examples: |
+      - Do you ship to multiple addresses?
+      - Can I have my order sent to different addresses?
+      - Can I split my order to multiple addresses?
+  
+  - intent: ask_shipping_estimate
+    examples: |
+      - Can I get a shipping estimate before ordering?
+      - How much will shipping cost?
+      - What’s the shipping cost?
+  
+  - intent: ask_shipping_insurance
+    examples: |
+      - Do you offer insurance for shipping?
+      - Is my order insured?
+      - Do you have shipping insurance?
+  
+  - intent: ask_refund_damaged_order
+    examples: |
+      - Can I get a refund if my order is damaged during shipping?
+      - What if my order arrives damaged?
+      - Can I get my money back if my order is damaged?
+  
+  - intent: ask_remote_area_shipping
+    examples: |
+      - Do you ship to remote areas?
+      - Can I get my order delivered to a remote area?
+      - Do you deliver to rural areas?
+  
+  - intent: ask_return_policy
+    examples: |
+      - What is your return policy?
+      - Can I return a product?
+      - Do you accept returns?
+  
+  - intent: ask_return_product_dislike
+    examples: |
+      - Can I return a product if I don’t like it?
+      - Can I get a refund if I don’t like the product?
+      - Can I return something if I change my mind?
+  
+  - intent: ask_initiate_return
+    examples: |
+      - How do I initiate a return?
+      - How do I return a product?
+      - What’s the process for returning an item?
+  
+  - intent: ask_free_returns
+    examples: |
+      - Do you offer free returns?
+      - Is return shipping free?
+      - Do you pay for return shipping?
+  
+  - intent: ask_return_window
+    examples: |
+      - What is the return window?
+      - How long do I have to return a product?
+      - What’s the deadline for returns?
+  
+  - intent: ask_refund_defective_product
+    examples: |
+      - Can I get a refund for a defective product?
+      - What if my product is defective?
+      - Can I get my money back if the product is defective?
+  
+  - intent: ask_refund_processing_time
+    examples: |
+      - How long does it take to process a refund?
+      - When will I get my refund?
+      - How fast are refunds processed?
+  
+  - intent: ask_exchange_product
+    examples: |
+      - Can I exchange a product instead of returning it?
+      - Can I swap a product?
+      - Can I get a different product instead of a refund?
+  
+  - intent: ask_original_packaging_return
+    examples: |
+      - Do I need the original packaging to return a product?
+      - Can I return a product without the original packaging?
+      - Do I need the box to return something?
+  
+  - intent: ask_return_without_receipt
+    examples: |
+      - Can I return a product without a receipt?
+      - Do I need a receipt to return something?
+      - Can I return something without proof of purchase?
+  
+  - intent: ask_refund_digital_product
+    examples: |
+      - What is your refund policy for digital products?
+      - Can I get a refund for a digital product?
+      - Do you refund digital products?
+  
+  - intent: ask_return_after_window
+    examples: |
+      - Can I return a product after the return window?
+      - Can I return something after the deadline?
+      - Can I still return a product after the return period?
+  
+  - intent: ask_store_credit
+    examples: |
+      - Do you offer store credit for returns?
+      - Can I get store credit instead of a refund?
+      - Do you give store credit for returns?
+  
+  - intent: ask_return_opened_product
+    examples: |
+      - Can I return a product if it’s opened?
+      - Can I return something after opening it?
+      - Can I get a refund if I opened the product?
+  
+  - intent: ask_return_status
+    examples: |
+      - How do I check the status of my return?
+      - Where is my return?
+      - How do I know if my return was processed?
+  
+  - intent: ask_return_used_product
+    examples: |
+      - Can I return a product if it’s used?
+      - Can I return something after using it?
+      - Can I get a refund if I used the product?
+  
+  - intent: ask_partial_refund
+    examples: |
+      - Do you offer partial refunds?
+      - Can I get a partial refund?
+      - Do you refund part of the cost?
+  
+  - intent: ask_return_damaged_shipping
+    examples: |
+      - Can I return a product if it’s damaged during shipping?
+      - What if my product arrives damaged?
+      - Can I get a refund if the product is damaged during shipping?
+  
+  - intent: ask_return_label
+    examples: |
+      - How do I get a return label?
+      - Can I get a return label?
+      - Do you provide return labels?
+  
+  - intent: ask_return_wrong_size
+    examples: |
+      - Can I return a product if it’s the wrong size?
+      - Can I return something if it doesn’t fit?
+      - Can I get a refund if the size is wrong?
+  
+  - intent: ask_refund_international_order
+    examples: |
+      - Do you offer refunds for international orders?
+      - Can I get a refund for an international order?
+      - Do you refund international orders?
+  
+  - intent: ask_return_not_as_described
+    examples: |
+      - Can I return a product if it’s not as described?
+      - What if the product is not as described?
+      - Can I get a refund if the product is not as described?
+  
+  - intent: ask_contact_support_return
+    examples: |
+      - How do I contact customer support for returns?
+      - How do I get help with a return?
+      - Who do I contact for return issues?
+  
+  - intent: ask_return_missing_parts
+    examples: |
+      - Can I return a product if it’s missing parts?
+      - What if my product is missing parts?
+      - Can I get a refund if parts are missing?
+  
+  - intent: ask_refund_sale_items
+    examples: |
+      - Do you offer refunds for sale items?
+      - Can I return sale items?
+      - Do you refund discounted products?
+  
+  - intent: ask_return_expired_product
+    examples: |
+      - Can I return a product if it’s expired?
+      - What if my product is expired?
+      - Can I get a refund if the product is expired?
+  
+  - intent: ask_track_return
+    examples: |
+      - How do I track my return?
+      - Where is my return?
+      - How do I know if my return was received?
+  
+  - intent: ask_return_non_functional
+    examples: |
+      - Can I return a product if it’s not functional?
+      - What if my product doesn’t work?
+      - Can I get a refund if the product is broken?
+  
+  - intent: ask_refund_gift_purchase
+    examples: |
+      - Do you offer refunds for gift purchases?
+      - Can I return a gift?
+      - Can I get a refund for a gift?
+  
+  - intent: ask_return_incompatible
+    examples: |
+      - Can I return a product if it’s not compatible?
+      - What if the product doesn’t work with my device?
+      - Can I get a refund if the product is incompatible?
+  
+  - intent: ask_create_account
+    examples: |
+      - How do I create an account?
+      - How can I sign up?
+      - How do I register?
+  
+  - intent: ask_account_required
+    examples: |
+      - Do I need an account to place an order?
+      - Can I order without an account?
+      - Do I have to create an account to buy something?
+  
+  - intent: ask_update_profile
+    examples: |
+      - How do I update my profile information?
+      - Can I change my profile details?
+      - How do I edit my profile?
+  
+  - intent: ask_change_username
+    examples: |
+      - Can I change my username?
+      - How do I change my username?
+      - Can I update my username?
+  
+  - intent: ask_profile_picture
+    examples: |
+      - Can I add a profile picture?
+      - Can I upload a profile photo?
+      - Can I change my profile picture?
+  
+  - intent: ask_reset_password
+    examples: |
+      - How do I reset my password?
+      - Can I reset my password?
+      - How do I change my password?
+  
+  - intent: ask_forgot_username
+    examples: |
+      - What if I forget my username?
+      - How do I recover my username?
+      - Can I get my username if I forget it?
+  
+  - intent: ask_delete_account
+    examples: |
+      - Can I delete my account?
+      - How do I delete my account?
+      - Can I remove my account?
+  
+  - intent: ask_order_history_deletion
+    examples: |
+      - What happens to my order history if I delete my account?
+      - Will I lose my order history if I delete my account?
+      - Can I keep my order history if I delete my account?
+  
+  - intent: ask_view_order_history
+    examples: |
+      - How do I view my order history?
+      - Where can I see my past orders?
+      - Can I see my order history?
+  
+  - intent: ask_download_invoices
+    examples: |
+      - Can I download invoices for past orders?
+      - How do I get an invoice for my order?
+      - Can I get a copy of my invoice?
+  
+  - intent: ask_update_newsletter_preferences
+    examples: |
+      - How do I update my newsletter preferences?
+      - Can I change my newsletter settings?
+      - How do I unsubscribe from the newsletter?
+  
+  - intent: ask_opt_out_promotional_emails
+    examples: |
+      - Can I opt out of promotional emails?
+      - How do I stop receiving promotional emails?
+      - Can I unsubscribe from marketing emails?
+  
+  - intent: ask_two_factor_authentication
+    examples: |
+      - Do you offer two-factor authentication (2FA)?
+      - Can I enable 2FA?
+      - Do you have 2FA?
+  
+  - intent: ask_update_security_settings
+    examples: |
+      - How do I update my security settings?
+      - Can I change my security settings?
+      - How do I make my account more secure?
+  
+  - intent: ask_access_data
+    examples: |
+      - How do I access or download my data?
+      - Can I get a copy of my data?
+      - How do I download my data?
+  
+  - intent: ask_data_retention_policy
+    examples: |
+      - What is your data retention policy?
+      - How long do you keep my data?
+      - Do you delete my data?
+  
+  - intent: ask_merge_accounts
+    examples: |
+      - Can I merge multiple accounts?
+      - How do I combine my accounts?
+      - Can I link my accounts?
+  
+  - intent: ask_multiple_accounts
+    examples: |
+      - What should I do if I have multiple accounts?
+      - Can I use multiple accounts?
+      - How do I manage multiple accounts?
+  
+  - intent: ask_cannot_login
+    examples: |
+      - What should I do if I can’t log in?
+      - I can’t log in, what should I do?
+      - How do I recover my account if I can’t log in?
+  
+  - intent: ask_contact_support_account
+    examples: |
+      - How do I contact support for account issues?
+      - Who do I contact for account problems?
+      - How do I get help with my account?
+  
+  - intent: ask_change_email
+    examples: |
+      - Can I change my email address?
+      - How do I update my email?
+      - Can I change the email on my account?
+  
+  - intent: ask_update_billing_address
+    examples: |
+      - Can I update my billing address?
+      - How do I change my billing address?
+      - Can I edit my billing address?
+  
+  - intent: ask_update_shipping_address
+    examples: |
+      - Can I update my shipping address?
+      - How do I change my shipping address?
+      - Can I edit my shipping address?
+  
+  - intent: ask_save_multiple_shipping_addresses
+    examples: |
+      - Can I save multiple shipping addresses?
+      - Can I have more than one shipping address?
+      - Can I store multiple addresses?
+  
+  - intent: ask_view_saved_payment_methods
+    examples: |
+      - Can I view my saved payment methods?
+      - How do I see my saved payment methods?
+      - Can I see my stored payment methods?
+  
+  - intent: ask_update_payment_method
+    examples: |
+      - Can I update my payment method?
+      - How do I change my payment method?
+      - Can I edit my payment method?
+  
+  - intent: ask_subscription_services
+    examples: |
+      - Can I set up a subscription for recurring orders?
+      - Do you offer subscription services?
+      - Can I subscribe to a product?
+  
+  - intent: ask_loyalty_points
+    examples: |
+      - Can I view my loyalty points or rewards?
+      - Do you have a loyalty program?
+      - Can I earn rewards?
+  
+  - intent: ask_change_notification_preferences
+    examples: |
+      - Can I change my notification preferences?
+      - How do I update my notification settings?
+      - Can I turn off notifications?"
