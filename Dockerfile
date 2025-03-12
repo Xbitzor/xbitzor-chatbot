@@ -1,23 +1,29 @@
-# Use the official Rasa image
-FROM rasa/rasa:latest
+# Use official Python image
+FROM python:3.9-slim
 
-# Copy project files
-COPY . /app
-
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# Install dependencies
-RUN pip install --no-cache-dir setuptools wheel
-RUN pip install --no-cache-dir fire
-RUN pip install --no-cache-dir -r requirements.txt
+# Install system dependencies (important for pip packages)
+RUN apt-get update && apt-get install -y \
+    gcc \
+    python3-dev \
+    build-essential \
+    libffi-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements file
+COPY requirements.txt .
+
+# Upgrade pip and install dependencies
+RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Train the model (optional, if not pre-trained)
-RUN rasa train
+# Copy project files
+COPY . .
 
 # Expose the port
 EXPOSE 5005
 
-# Run the Rasa server
+# Start Rasa server
 CMD ["rasa", "run", "--enable-api", "--cors", "*"]
