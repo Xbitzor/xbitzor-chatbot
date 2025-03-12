@@ -8,6 +8,9 @@ COPY . /app
 WORKDIR /app
 
 # Install dependencies
+RUN pip install --no-cache-dir setuptools wheel
+RUN pip install --no-cache-dir fire
+RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Train the model (optional, if not pre-trained)
