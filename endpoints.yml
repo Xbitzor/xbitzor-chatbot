@@ -2,7 +2,7 @@
 
 # Configuration for the custom action server
 action_endpoint:
-  url: "http://localhost:5005/webhook"
+  url: "https://zany-winner-x5vxq97w5wg5hv9v-5055.app.github.dev/webhooks/rest/webhook"
 
 # Uncomment and configure the following if you're using a database for tracker store
 # tracker_store:
