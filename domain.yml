@@ -5,20 +5,20 @@ intents:
   - ask_product_availability
   - ask_product_price
   - ask_product_reviews
-  - ask_payment_methods
-  - ask_shipping_options
-  - ask_return_policy
-  - ask_create_account
-  - ask_reset_password
+  - ask_payment_methods2
+  - ask_shipping_options2
+  - ask_return_policy2
+  - ask_create_account2
+  - ask_reset_password2
   - recommend_product
   - ask_product_features
-  - ask_product_price
+  - ask_product_price2
   - ask_product_customization
   - ask_product_images
   - ask_product_dimensions
   - ask_product_suitability
-  - ask_product_warranty
-  - ask_product_reviews
+  - ask_product_warranty2
+  - ask_product_reviews2
   - ask_product_customization_options
   - ask_product_eco_friendliness
   - ask_product_materials
@@ -658,6 +658,12 @@ responses:
 
   utter_ask_payment_security_3:
     - text: "Yes, we use secure payment processing to protect your transactions and personal information."
+    
+  utter_ask_shipping_options:
+    - text: "We offer standard and express shipping. You can select your preferred option during checkout."  
+
+  utter_ask_create_account:
+    - text: "You can create an account by clicking on the 'Sign Up' button on our website."
 
 session_config:
   session_expiration_time: 60
