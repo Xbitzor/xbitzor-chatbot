@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir --user -r requirements.txt
 
 # Train the model (optional, if not pre-trained)
 RUN rasa train
