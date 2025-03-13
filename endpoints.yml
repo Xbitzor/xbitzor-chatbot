@@ -2,7 +2,8 @@
 
 # Configuration for the custom action server
 action_endpoint:
-  url: "https://zany-winner-x5vxq97w5wg5hv9v-5055.app.github.dev/webhooks/rest/webhook"
+  url: "https://${RASA_X_HOST}/webhook"
+  token: "${RASA_TOKEN}"
 
 # Uncomment and configure the following if you're using a database for tracker store
 # tracker_store:
