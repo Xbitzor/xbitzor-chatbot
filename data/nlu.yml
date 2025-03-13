@@ -1985,64 +1985,64 @@ nlu:
       - Can I escalate an issue if needed?
       - How long does it take to resolve a dispute?
 
-- intent: ask_product_warranty_2
-  examples: |
+  - intent: ask_product_warranty_2
+    examples: |
     - What is the warranty on your products?
     - Do your products come with a warranty?
     - Can I get a replacement if my item is defective?
     - How long does the product warranty last?
     - Is there an extended warranty option?
 
-- intent: ask_use_website_content_2
-  examples: |
+  - intent: ask_use_website_content_2
+    examples: |
     - Can I use content from your website?
     - Am I allowed to copy text from your site?
     - Is it okay to use your images for my project?
     - Can I republish your articles?
     - What are the rules for using your website content?
 
-- intent: ask_po_box_shipping_2
-  examples: |
+  - intent: ask_po_box_shipping_2
+    examples: |
     - Do you ship to PO boxes?
     - Can I use a PO Box for delivery?
     - Is PO Box delivery available?
     - Do you support PO Box shipping?
     - Can I receive my order at a PO Box?
 
-- intent: ask_change_order_after_payment_3
-  examples: |
+  - intent: ask_change_order_after_payment_3
+    examples: |
     - Can I modify my order after payment?
     - Is it possible to change an order once paid?
     - Can I update my order after checkout?
     - I need to change my order details, what do I do?
     - How can I adjust an order that’s already paid for?
 
-- intent: ask_gift_cards_2
-  examples: |
+  - intent: ask_gift_cards_2
+    examples: |
     - Do you sell gift cards?
     - Can I buy a gift card for your store?
     - Do you have digital gift cards?
     - How do I redeem a gift card?
     - Are your gift cards refundable?
 
-- intent: ask_track_order_3
-  examples: |
+  - intent: ask_track_order_3
+    examples: |
     - How do I track my order?
     - Where is my package?
     - Can I check my order status?
     - I want to track my shipment.
     - Is there a tracking link for my order?
 
-- intent: ask_payment_methods_3
-  examples: |
+  - intent: ask_payment_methods_3
+    examples: |
     - What payment methods do you accept?
     - Can I pay with PayPal?
     - Do you accept credit cards?
     - Can I use Apple Pay?
     - What are the available payment options?
 
-- intent: ask_payment_security_3
-  examples: |
+  - intent: ask_payment_security_3
+    examples: |
     - Is my payment information safe?
     - How secure are my credit card details?
     - Do you use encryption for payments?
